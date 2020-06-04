@@ -45,7 +45,8 @@ Things you may want to cover:
 |name|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :users
+- has_many :user_id
+- has_many :messages
 
 ## groups_usersテーブル
 
