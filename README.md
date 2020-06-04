@@ -35,7 +35,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :messages
-- has_meny :groups
+- has_many :groups
 
 ## groups_usersテーブル
 
