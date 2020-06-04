@@ -57,8 +57,8 @@ Things you may want to cover:
 |group|references|null: false, foreign_key: true|
 
 ### Association
-- has_many :groups
-- has_many :users
+- belong_to :group
+- belong_to :user
 
 ## messagesテーブル
 
