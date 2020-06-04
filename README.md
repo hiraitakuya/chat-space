@@ -23,6 +23,20 @@ Things you may want to cover:
 
 * ...
 
+# Chat-space DB設計
+
+## usersテーブル
+
+|Colum|Type|Options|
+|-----|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|nickname|string|null: false|
+
+### Association
+- has_many :messages
+- has_meny :groups
+
 ## groups_usersテーブル
 
 |Column|Type|Options|
