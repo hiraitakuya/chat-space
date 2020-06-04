@@ -42,11 +42,11 @@ Things you may want to cover:
 
 |Colum|Type|Options|
 |-----|----|-------|
-|group_name|string|null: false|
-|name|integer|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
-- has_many :user_id
+- has_many :users, through: :groups_users
+- has_many :groups_users
 - has_many :messages
 
 ## groups_usersテーブル
