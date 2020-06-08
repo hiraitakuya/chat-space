@@ -11,12 +11,40 @@
   &__user_name{
     background-color: #253141;
     height: 100px;
+    display: flex;
+    &__text_box{
+      width: 260px;
+      height: 20px;
+      margin: auto 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name_text{
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+      }
+      &__icon_box{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &--edit_icon{
+          color: #ffffff;
+          display: block;
+          margin-right: 5px;
+        }
+        &--cog_icon{
+          color: #ffffff;
+          display: block;
+        }
+      }
+    }
   }
   &__group_list{
     background-color: #2f3e51;
     height : calc(100vh - 100px);
   }
-
 }
 
 .main_chat {
