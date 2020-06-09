@@ -67,7 +67,7 @@
   &__group_info{
     height: 100px;
     width:  calc(100vw - 300px);
-    background-color:lightgoldenrodyellow;
+    background-color:#ffffff;
     display: flex;
     justify-content: space-between;
     &__left_box{
@@ -107,14 +107,38 @@
   }
 
   &__message_list{
-    width: calc(100vw - 300px);
     height: calc(100vh - 100px - 90px);
-    background-color: lightblue;
+    background-color: #fafafa;
     border: solid 1px #eeeeee;
+    &__message_box{
+      margin-left: 40px;
+      margin-bottom: 46px;
+      margin-top: 35px;
+      &__top_box{
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: flex-start;
+        &__member_name{
+          font-size: 16px;
+          color: #333333;
+          font-weight: bold;
+        }
+        &__date_info{
+          font-size: 12px;
+          color: #999999;
+          margin-left: 10px;
+        }
+      }
+      &__message{
+        font-size: 14px;
+        color: #434a54;
+        margin-top: 12px;
+      }
+    }
   }
   &__message_form{
     height: 90px;
     width:  calc(100vw - 300px);
-    background-color: lightcoral;
+    background-color: #d2d2d2;
   }
 }
