@@ -44,6 +44,20 @@
   &__group_list{
     background-color: #2f3e51;
     height : calc(100vh - 100px);
+    &__list_box{
+      height: 91px;
+      color: #ffffff;
+      padding-top: 20px;
+      padding-left: 20px;
+      &__group_name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__top_message{
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
+    }
   }
 }
 
@@ -52,16 +66,55 @@
   height: 100vh;
   &__group_info{
     height: 100px;
-    background-color:#ffffff;
+    width:  calc(100vw - 300px);
+    background-color:lightgoldenrodyellow;
+    display: flex;
+    justify-content: space-between;
+    &__left_box{
+      padding-left: 40px;
+      &__chat_tittle{
+        font-size: 20px;
+        color: #333333;
+        margin-top: 35px;
+        margin-bottom: 15px;
+      }
+      &__member_list{
+        font-size: 12px;
+        color: #999999;
+        display: flex;
+        justify-content: start;
+        list-style: none;
+        &__chat_member{
+          margin-left: 5px;
+          color: lightsalmon;
+        }
+      }
+    }
+    &__right_box{
+      width: 72px;
+      height: 40px;
+      border: solid 1px #38aef0;
+      margin-top: 28px;
+      margin-right: 40px;
+      &--edit_btn{
+        color: #38aef0;
+        font-size: 16px;
+        line-height: 40px;
+        margin: 0 20px;
+        text-decoration: none;
+      }
+    }
   }
+
   &__message_list{
     width: calc(100vw - 300px);
     height: calc(100vh - 100px - 90px);
-    background-color: #fafafa;
+    background-color: lightblue;
     border: solid 1px #eeeeee;
   }
   &__message_form{
     height: 90px;
-    background-color: #d2d2d2;
+    width:  calc(100vw - 300px);
+    background-color: lightcoral;
   }
 }
