@@ -1,4 +1,16 @@
 .mainchat
   .main_chat__group_info
+    .main_chat__group_info__left_box
+      .main_chat__group_info__left_box__chat_tittle
+        test
+      %ul.main_chat__group_info__left_box__member_list
+        Member :
+        %li.main_chat__group_info__left_box__member_list__chat_membar
+          hirai_takuya
+        %li.main_chat__group_info__left_box__member_list__chat_membar
+          hirai_takuya
+    .main_chat__group_info__right_box
+      = link_to "Edit", "#", class: "main_chat__group_info__right_box--edit_btn"
+
   .main_chat__message_list
   .main_chat__message_form
