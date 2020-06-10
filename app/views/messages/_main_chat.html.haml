@@ -4,10 +4,10 @@
       .main_chat__group_info__left_box__chat_tittle
         test
       %ul.main_chat__group_info__left_box__member_list
-        Member :
-        %li.main_chat__group_info__left_box__member_list__chat_membar
+        Member :&nbsp;
+        %li.main_chat__group_info__left_box__member_list__chat_member
           hirai_takuya
-        %li.main_chat__group_info__left_box__member_list__chat_membar
+        %li.main_chat__group_info__left_box__member_list__chat_member
           hirai_takuya
     .main_chat__group_info__right_box
       = link_to "Edit", "#", class: "main_chat__group_info__right_box--edit_btn"
@@ -39,3 +39,10 @@
         hello!
 
   .main_chat__message_form
+    %form.main_chat__message_form__form_box(action="new_message")
+      .main_chat__message_form__form_box__form_contents
+        %input.main_chat__message_form__form_box__form_contents__input_text(type="text" placeholder="type a message")/
+        %label.main_chat__message_form__form_box__form_contents__input_image(for="hidden_file")
+          = icon('far', 'image', class: "main_chat__message_form__form_box__form_contents__input_image--img_icon", ) 
+          %input.main_chat__message_form__form_box__form_contents__input_image--hidden_file(type="file" id="hidden_file")/
+      %input.main_chat__message_form__form_box--send_btn(type="button" value="Send")/
