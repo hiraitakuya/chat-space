@@ -46,16 +46,17 @@
     height : calc(100vh - 100px);
     &__list_box{
       height: 91px;
-      color: #ffffff;
       padding-top: 20px;
       padding-left: 20px;
       &__group_name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: #ffffff;
       }
       &__top_message{
         font-size: 11px;
         margin-bottom: 40px;
+        color: #ffffff;
       }
     }
   }
