@@ -4,7 +4,7 @@
       .side_bar__user_name__text_box__name_text
         = current_user.name
       .side_bar__user_name__text_box__icon_box
-        = link_to "#", class: "" do
+        = link_to new_group_path(), class: "" do
           = icon('far', 'edit',  class: "side_bar__user_name__text_box__icon_box--edit_icon")
         = link_to edit_user_path(current_user), class: "" do
           = icon('fas', 'cog',  class: "side_bar__user_name__text_box__icon_box--cog_icon")
