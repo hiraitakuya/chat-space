@@ -2,47 +2,22 @@
   .main_chat__group_info
     .main_chat__group_info__left_box
       .main_chat__group_info__left_box__chat_tittle
-        test
+        = @group.name
       %ul.main_chat__group_info__left_box__member_list
         Member :&nbsp;
         %li.main_chat__group_info__left_box__member_list__chat_member
-          hirai_takuya
-        %li.main_chat__group_info__left_box__member_list__chat_member
-          hirai_takuya
+          = current_user.name
     .main_chat__group_info__right_box
-      = link_to "Edit", "#", class: "main_chat__group_info__right_box--edit_btn"
+      = link_to "Edit", edit_group_path(@group), class: "main_chat__group_info__right_box--edit_btn"
 
   .main_chat__message_list
-    .main_chat__message_list__message_box
-      .main_chat__message_list__message_box__top_box
-        .main_chat__message_list__message_box__top_box__member_name
-          hirai_takuya
-        .main_chat__message_list__message_box__top_box__date_info
-          2020年06月09日 15時37分
-      .main_chat__message_list__message
-        hello!
-    .main_chat__message_list__message_box
-      .main_chat__message_list__message_box__top_box
-        .main_chat__message_list__message_box__top_box__member_name
-          hirai_takuya
-        .main_chat__message_list__message_box__top_box__date_info
-          2020年06月09日 15時37分
-      .main_chat__message_list__message
-        hello!
-    .main_chat__message_list__message_box
-      .main_chat__message_list__message_box__top_box
-        .main_chat__message_list__message_box__top_box__member_name
-          hirai_takuya
-        .main_chat__message_list__message_box__top_box__date_info
-          2020年06月09日 15時37分
-      .main_chat__message_list__message
-        hello!
+    = render @messages
 
   .main_chat__message_form
-    %form.main_chat__message_form__form_box(action="new_message")
+    = form_with model: [@group, @message], html: {class: "main_chat__message_form__form_box"}, local: true do |f|
       .main_chat__message_form__form_box__form_contents
-        %input.main_chat__message_form__form_box__form_contents__input_text(type="text" placeholder="type a message")/
-        %label.main_chat__message_form__form_box__form_contents__input_image(for="hidden_file")
+        = f.text_field :content, class: 'main_chat__message_form__form_box__form_contents__input_text', placeholder: 'type a message'
+        = f.label :image, class: 'main_chat__message_form__form_box__form_contents__input_image' do
           = icon('far', 'image', class: "main_chat__message_form__form_box__form_contents__input_image--img_icon", ) 
-          %input.main_chat__message_form__form_box__form_contents__input_image--hidden_file(type="file" id="hidden_file")/
-      %input.main_chat__message_form__form_box--send_btn(type="button" value="Send")/
+          = f.file_field :image, class: 'main_chat__message_form__form_box__form_contents__input_image--hidden_file'
+      = f.submit 'Send', class: 'main_chat__message_form__form_box--send_btn'
