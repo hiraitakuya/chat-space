@@ -1,13 +1,13 @@
 $(function(){
 
   function buildHTML(message){
-    if (message.img) {
+    if (message.image) {
       let html = 
         `<div class="main_chat__message_list__message_box">
           <div class="main_chat__message_list__message_box__top_box">
             <div class="main_chat__message_list__message_box__top_box__member_name">
-              ${ message.user.name }
-            /div>
+              ${ message.user_name }
+            </div>
             <div class="main_chat__message_list__message_box__top_box__date_info">
               ${ message.created_at }
             </div>
