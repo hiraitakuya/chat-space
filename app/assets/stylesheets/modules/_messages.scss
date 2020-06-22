@@ -44,6 +44,7 @@
   &__group_list{
     background-color: #2f3e51;
     height : calc(100vh - 100px);
+    overflow: scroll;
     &__list_box{
       height: 91px;
       padding-top: 20px;
