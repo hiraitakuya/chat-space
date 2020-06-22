@@ -110,6 +110,7 @@
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     border: solid 1px #eeeeee;
+    overflow: scroll;
     &__message_box{
       margin-left: 40px;
       margin-bottom: 46px;
