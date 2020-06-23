@@ -3,7 +3,7 @@ $(function(){
   function buildHTML(message){
     if (message.image) {
       let html = 
-        `<div class="main_chat__message_list__message_box">
+        `<div class="main_chat__message_list__message_box" data-message-id=${message.id}>
           <div class="main_chat__message_list__message_box__top_box">
             <div class="main_chat__message_list__message_box__top_box__member_name">
               ${ message.user_name }
@@ -23,7 +23,7 @@ $(function(){
     }
     else {
       let html = 
-        `<div class="main_chat__message_list__message_box">
+        `<div class="main_chat__message_list__message_box" data-message-id=${message.id}>
           <div class="main_chat__message_list__message_box__top_box">
             <div class="main_chat__message_list__message_box__top_box__member_name">
               ${ message.user_name }
